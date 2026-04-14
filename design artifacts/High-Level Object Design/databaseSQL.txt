@@ -1,0 +1,21 @@
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
+DROP TABLE IF EXISTS audits; 
+DROP TABLE IF EXISTS users ;
+
+CREATE TABLE users (
+	user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	email VARCHAR(255) UNIQUE NOT NULL,
+	password_hash VARCHAR(100) NOT NULL,
+	role VARCHAR(20) CHECK (role in ('general', 'auditor', 'admin')),
+	first_name VARCHAR(100) NOT NULL,
+	last_name VARCHAR(100) NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE audits (
+	audit_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	created_by UUID REFERENCES users(user_id),
+	assigned_auditor_id UUID REFERENCES users(user_id),
+	status VARCHAR(100) DEFAULT 'pending',
+	audit_data JSONB
+);

@@ -1,0 +1,225 @@
+{
+    "generated_at": "2025-11-28T09:15:00",
+    "reference_marker_id": 101,
+    "marker_ids_seen": [
+        101,
+        102,
+        103
+    ],
+    "markers_world": {
+        "101": {
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "x_axis": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "y_axis": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "z_axis": [
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "102": {
+            "position": [
+                2.2,
+                0.0,
+                0.0
+            ],
+            "x_axis": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "y_axis": [
+                -1.0,
+                0.0,
+                0.0
+            ],
+            "z_axis": [
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "103": {
+            "position": [
+                0.0,
+                2.5,
+                0.0
+            ],
+            "x_axis": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "y_axis": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "z_axis": [
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    },
+    "room_box_from_markers_m": {
+        "min": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "max": [
+            2.2,
+            2.5,
+            2.6
+        ],
+        "size": [
+            2.2,
+            2.5,
+            2.6
+        ]
+    },
+    "detected_objects": [
+        {
+            "id": "door_01",
+            "type": "door",
+            "position": [
+                1.1,
+                0.02,
+                1.05
+            ],
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "dimensions": {
+                "width": 0.95,
+                "height": 2.1,
+                "depth": 0.05
+            }
+        },
+        {
+            "id": "btn_open",
+            "type": "button",
+            "position": [
+                1.75,
+                0.02,
+                1.0
+            ],
+            "rotation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "id": "toilet_01",
+            "type": "toilet",
+            "position": [
+                0.45,
+                2.25,
+                0.0
+            ],
+            "rotation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "id": "grab_side",
+            "type": "grab_bar",
+            "position": [
+                0.05,
+                2.25,
+                0.85
+            ],
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "radius": 0.04
+        },
+        {
+            "id": "grab_rear",
+            "type": "grab_bar",
+            "position": [
+                0.45,
+                2.45,
+                0.85
+            ],
+            "rotation": [
+                0,
+                1.57,
+                0
+            ],
+            "radius": 0.04
+        },
+        {
+            "id": "sink_01",
+            "type": "sink",
+            "position": [
+                2.0,
+                1.5,
+                0.8
+            ],
+            "rotation": [
+                0,
+                0,
+                -1.57
+            ]
+        },
+        {
+            "id": "garbage_01",
+            "type": "garbage",
+            "position": [
+                2.0,
+                0.4,
+                0.0
+            ]
+        }
+    ],
+    "audit_annotations": [
+        {
+            "position": [
+                1.1,
+                0.02,
+                1.5
+            ],
+            "text": "Door Width: 0.95m\n(Compliant)",
+            "status": "ok"
+        },
+        {
+            "position": [
+                1.75,
+                0.02,
+                1.1
+            ],
+            "text": "Button H: 1.0m\n(Compliant)",
+            "status": "ok"
+        },
+        {
+            "position": [
+                0.05,
+                2.25,
+                0.9
+            ],
+            "text": "Grab Bar H: 0.85m\n(Compliant)",
+            "status": "ok"
+        }
+    ]
+}

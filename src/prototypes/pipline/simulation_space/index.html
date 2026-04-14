@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Audit Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Import Three.js for 3D rendering -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- UI STRUCTURE -->
+    <div id="header">
+        <h1>Accessibility Audit: Public Bathroom</h1>
+    </div>
+
+    <!-- Toggleable Layers on 3D Model -->
+    <div id="controls-panel">
+        <h3>View Layers</h3>
+
+        <div class="toggle-row">
+            <span class="toggle-label">Room Walls/Floor</span>
+            <label class="switch"><input type="checkbox" checked id="toggleBounds"><span class="slider"></span></label>
+        </div>
+        <div class="toggle-row">
+            <span class="toggle-label">Detected Objects</span>
+            <label class="switch"><input type="checkbox" checked id="toggleObjects"><span class="slider"></span></label>
+        </div>
+        <div class="toggle-row">
+            <span class="toggle-label">Dimensions</span>
+            <label class="switch"><input type="checkbox" checked id="toggleDimensions"><span
+                    class="slider"></span></label>
+        </div>
+        <div class="toggle-row">
+            <span class="toggle-label">Audit Annotations</span>
+            <label class="switch"><input type="checkbox" checked id="toggleAnnotations"><span
+                    class="slider"></span></label>
+        </div>
+        <div class="toggle-row">
+            <span class="toggle-label">Raw Markers</span>
+            <label class="switch"><input type="checkbox" id="toggleMarkers"><span class="slider"></span></label>
+        </div>
+
+        <!-- Buttons to manage data actions (upload, save, export) -->
+        <div class="btn-group">
+            <h3>Data Actions</h3>
+            <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">📂 Upload Scan
+                JSON</button>
+            <input type="file" id="fileInput" accept=".json" style="display:none">
+
+            <button class="btn" id="btnExportJSON">💾 Save Audit (JSON)</button>
+            <button class="btn" id="btnExportGLTF">📦 Export 3D Model (.glb)</button>
+        </div>
+    </div>
+
+    <!-- Legend for 3D Model Layers -->
+    <div id="info-panel">
+        <h3>Legend</h3>
+        <div class="legend-item"><span class="color-box" style="background:rgba(100, 149, 237, 0.4);"></span> Room Walls
+        </div>
+        <div class="legend-item"><span class="color-box" style="background:#444;"></span> Floor</div>
+        <div class="legend-item"><span class="color-box" style="background:#ff9800;"></span> Detected Object</div>
+        <div class="legend-item"><span class="color-box" style="background:#ff3333;"></span> Issue / Violation</div>
+        <div class="legend-item"><span class="color-box" style="background:#4CAF50;"></span> Compliant</div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

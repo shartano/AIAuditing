@@ -1,0 +1,85 @@
+{
+  "compliance_checks": {
+    "turning_radius": {
+      "name": "Turning Diameter",
+      "target_object": "room_clearance",
+      "metric": "diameter_m",
+      "description": "A 1500mm diameter circle must be free of obstructions.",
+      "rules": {
+        "red": { "max": 1.49 },
+        "green": { "min": 1.50 }
+      }
+    },
+    
+    "toilet_seat_height": {
+      "name": "Toilet Seat Height",
+      "target_object": "toilet",
+      "metric": "height_m",
+      "description": "The top of the seat must be between 430mm and 485mm from the floor.",
+      "rules": {
+        "red_low": { "max": 0.429 },
+        "green": { "min": 0.430, "max": 0.485 },
+        "red_high": { "min": 0.486 }
+      }
+    },
+    
+    "door_width": {
+      "name": "Door Clear Width",
+      "target_object": "door",
+      "metric": "width_m",
+      "description": "Minimum clear width is 864mm. Best practice is 915mm.",
+      "rules": {
+        "red": { "max": 0.863 },
+        "yellow": { "min": 0.864, "max": 0.914 },
+        "green": { "min": 0.915 }
+      }
+    },
+
+    "grab_bar_obstruction": {
+      "name": "Grab Bar Obstruction Check",
+      "target_object": "grab_bar",
+      "metric": "is_obstructed",
+      "description": "Dispensers or bins must not be mounted above or near the grab bar.",
+      "rules": {
+        "green": { "value": false },
+        "red": { "value": true }
+      }
+    },
+    
+    "ToilerPaper_height": {
+      "name": "Toiler Paper Dispenser Controls Height",
+      "target_object": "dispenser",
+      "metric": "height_m",
+      "description": "Operable parts must be between 380-1220 mm.",
+      "rules": {
+        "red_low": { "max": 0.379 },
+        "green": { "min": 0.380, "max": 1.219 },
+        "red_high": { "min": 1.220 }
+      }
+    },
+
+    "dispenser_height": {
+      "name": "Dispenser Controls Height",
+      "target_object": "dispenser",
+      "metric": "height_m",
+      "description": "Operable parts must be between 1120mm and 1220mm.",
+      "rules": {
+        "red_low": { "max": 1.119 },
+        "green": { "min": 1.120, "max": 1.220 },
+        "red_high": { "min": 1.221 }
+      }
+    },
+
+    "emergency_button_height": {
+      "name": "Emergency Button Position",
+      "target_object": "emergency_button",
+      "metric": "height_m",
+      "description": "Button must be mounted between 700mm and 1200mm from the floor.",
+      "rules": {
+        "red_low": { "max": 0.699 },
+        "green": { "min": 0.700, "max": 1.200 },
+        "red_high": { "min": 1.201 }
+      }
+    }
+  }
+}
